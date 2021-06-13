@@ -1,0 +1,40 @@
+{
+    "profile-id": {
+        "name": "bridge",
+        "mode": "bridge",
+        "admin-password": "bridge",
+        "lan-provisioned": false,
+        "services": {
+            "http-port": 80,
+            "ssh-enabled": false,
+            "telnet-enabled": false,
+            "ubnt-discovery-enabled": false
+        },
+        "bridge-mode": {
+            "port": {
+                "10": {
+                    "include-vlan": [],
+                    "native-vlan": "10"
+                },
+                "2": {
+                    "include-vlan": [],
+                    "native-vlan": "10"
+                },
+                "3": {
+                    "include-vlan": [],
+                    "native-vlan": "10"
+                },
+                "4": {
+                    "include-vlan": [],
+                    "native-vlan": "10"
+                },
+                "wifi": {
+                    "native-vlan": "10"
+                }
+            }
+        },
+        "bandwidth-limit-enabled": true,
+        "bandwidth-limit-down": "100",
+        "bandwidth-limit-up": "100"
+    }
+}

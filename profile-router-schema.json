@@ -1,0 +1,200 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "profile-id": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "admin-password": {
+            "type": "string"
+          },
+          "lan-provisioned": {
+            "type": "boolean"
+          },
+          "services": {
+            "type": "object",
+            "properties": {
+              "http-port": {
+                "type": "integer"
+              },
+              "ssh-enabled": {
+                "type": "boolean"
+              },
+              "telnet-enabled": {
+                "type": "boolean"
+              },
+              "ubnt-discovery-enabled": {
+                "type": "boolean"
+              },
+              "ssh-port": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "http-port",
+              "ssh-enabled",
+              "telnet-enabled",
+              "ubnt-discovery-enabled",
+              "ssh-port"
+            ]
+          },
+          "lan-address": {
+            "type": "string"
+          },
+          "port": {
+            "type": "object",
+            "properties": {
+              "1": {
+                "type": "object",
+                "properties": {
+                  "link-speed": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "link-speed"
+                ]
+              },
+              "2": {
+                "type": "object",
+                "properties": {
+                  "link-speed": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "link-speed"
+                ]
+              },
+              "3": {
+                "type": "object",
+                "properties": {
+                  "link-speed": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "link-speed"
+                ]
+              },
+              "4": {
+                "type": "object",
+                "properties": {
+                  "link-speed": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "link-speed"
+                ]
+              }
+            },
+            "required": [
+              "1",
+              "2",
+              "3",
+              "4"
+            ]
+          },
+          "router-mode": {
+            "type": "object",
+            "properties": {
+              "wan-vlan": {
+                "type": "string"
+              },
+              "wan-mode": {
+                "type": "string"
+              },
+              "nat-protocol-ftp": {
+                "type": "boolean"
+              },
+              "nat-protocol-pptp": {
+                "type": "boolean"
+              },
+              "nat-protocol-rtsp": {
+                "type": "boolean"
+              },
+              "nat-protocol-sip": {
+                "type": "boolean"
+              },
+              "wan-access-blocked": {
+                "type": "boolean"
+              },
+              "upnp-enabled": {
+                "type": "boolean"
+              },
+              "dns-resolver": {
+                "type": "array",
+                "items": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "type": "string"
+                  }
+                ]
+              },
+              "dhcp-server": {
+                "type": "string"
+              },
+              "dhcp-pool": {
+                "type": "string"
+              },
+              "dhcp-lease-time": {
+                "type": "string"
+              },
+              "dns-proxy-enable": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "wan-vlan",
+              "wan-mode",
+              "nat-protocol-ftp",
+              "nat-protocol-pptp",
+              "nat-protocol-rtsp",
+              "nat-protocol-sip",
+              "wan-access-blocked",
+              "upnp-enabled",
+              "dns-resolver",
+              "dhcp-server",
+              "dhcp-pool",
+              "dhcp-lease-time",
+              "dns-proxy-enable"
+            ]
+          },
+          "bandwidth-limit-enabled": {
+            "type": "boolean"
+          },
+          "bandwidth-limit-down": {
+            "type": "string"
+          },
+          "bandwidth-limit-up": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "mode",
+          "admin-password",
+          "lan-provisioned",
+          "services",
+          "lan-address",
+          "port",
+          "router-mode",
+          "bandwidth-limit-enabled",
+          "bandwidth-limit-down",
+          "bandwidth-limit-up"
+        ]
+      }
+    },
+    "required": [
+      "profile-id"
+    ]
+  }

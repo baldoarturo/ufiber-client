@@ -1,0 +1,164 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "properties": {
+      "profile-id": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "mode": {
+            "type": "string"
+          },
+          "admin-password": {
+            "type": "string"
+          },
+          "lan-provisioned": {
+            "type": "boolean"
+          },
+          "services": {
+            "type": "object",
+            "properties": {
+              "http-port": {
+                "type": "integer"
+              },
+              "ssh-enabled": {
+                "type": "boolean"
+              },
+              "telnet-enabled": {
+                "type": "boolean"
+              },
+              "ubnt-discovery-enabled": {
+                "type": "boolean"
+              }
+            },
+            "required": [
+              "http-port",
+              "ssh-enabled",
+              "telnet-enabled",
+              "ubnt-discovery-enabled"
+            ]
+          },
+          "bridge-mode": {
+            "type": "object",
+            "properties": {
+              "port": {
+                "type": "object",
+                "properties": {
+                  "1": {
+                    "type": "object",
+                    "properties": {
+                      "include-vlan": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "native-vlan": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "include-vlan",
+                      "native-vlan"
+                    ]
+                  },
+                  "2": {
+                    "type": "object",
+                    "properties": {
+                      "include-vlan": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "native-vlan": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "include-vlan",
+                      "native-vlan"
+                    ]
+                  },
+                  "3": {
+                    "type": "object",
+                    "properties": {
+                      "include-vlan": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "native-vlan": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "include-vlan",
+                      "native-vlan"
+                    ]
+                  },
+                  "4": {
+                    "type": "object",
+                    "properties": {
+                      "include-vlan": {
+                        "type": "array",
+                        "items": {}
+                      },
+                      "native-vlan": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "include-vlan",
+                      "native-vlan"
+                    ]
+                  },
+                  "wifi": {
+                    "type": "object",
+                    "properties": {
+                      "native-vlan": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "native-vlan"
+                    ]
+                  }
+                },
+                "required": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "wifi"
+                ]
+              }
+            },
+            "required": [
+              "port"
+            ]
+          },
+          "bandwidth-limit-enabled": {
+            "type": "boolean"
+          },
+          "bandwidth-limit-down": {
+            "type": "string"
+          },
+          "bandwidth-limit-up": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "mode",
+          "admin-password",
+          "lan-provisioned",
+          "services",
+          "bridge-mode",
+          "bandwidth-limit-enabled",
+          "bandwidth-limit-down",
+          "bandwidth-limit-up"
+        ]
+      }
+    },
+    "required": [
+      "profile-id"
+    ]
+  }

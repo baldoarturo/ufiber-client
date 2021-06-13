@@ -1,0 +1,34 @@
+{
+    "UBNTxxxxxxxx": {
+        "disable": "false",
+        "profile": "profile-id",
+        "name": "onu",
+        "wifi": {
+            "provisioned": false,
+            "enabled": false,
+            "ssid": "UBNT",
+            "hide-ssid": false,
+            "auth-mode": "wpa2psk",
+            "wpapsk": "ubntubnt",
+            "channel": "auto",
+            "channel-width": "20/40",
+            "tx-power": "100"
+        },
+        "pppoe-mode": "auto",
+        "pppoe-user": "user",
+        "pppoe-password": "pass",
+        "wan-address": "",
+        "port-forwards": [
+            {
+                "enabled": false,
+                "protocol": "", 
+                "lan-ip": "",
+                "lan-port-start": "",
+                "lan-port-end": "",
+                "wan-port-start": "",
+                "wan-port-end": "",
+                "comment": ""
+            }
+        ]
+    }
+}

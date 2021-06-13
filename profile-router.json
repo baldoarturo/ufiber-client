@@ -1,0 +1,51 @@
+{
+    "profile-id": {
+        "name": "router",
+        "mode": "router",
+        "admin-password": "router",
+        "lan-provisioned": true,
+        "services": {
+            "http-port": 80,
+            "ssh-enabled": true,
+            "telnet-enabled": false,
+            "ubnt-discovery-enabled": true,
+            "ssh-port": 22
+        },
+        "lan-address": "192.168.1.100/24",
+        "port": {
+            "1": {
+                "link-speed": "auto"
+            },
+            "2": {
+                "link-speed": "auto"
+            },
+            "3": {
+                "link-speed": "auto"
+            },
+            "4": {
+                "link-speed": "auto"
+            }
+        },
+        "router-mode": {
+            "wan-vlan": "1",
+            "wan-mode": "pppoe",
+            "nat-protocol-ftp": true,
+            "nat-protocol-pptp": true,
+            "nat-protocol-rtsp": true,
+            "nat-protocol-sip": true,
+            "wan-access-blocked": true,
+            "upnp-enabled": true,
+            "dns-resolver": [
+                "8.8.8.8",
+                "8.8.4.4"
+            ],
+            "dhcp-server": "enabled",
+            "dhcp-pool": "192.168.1.50-192.168.1.150",
+            "dhcp-lease-time": "3600",
+            "dns-proxy-enable": false
+        },
+        "bandwidth-limit-enabled": true,
+        "bandwidth-limit-down": "100",
+        "bandwidth-limit-up": "100"
+    }
+}
