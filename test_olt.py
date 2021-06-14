@@ -1,1 +1,1 @@
-pass
+exit(0)
