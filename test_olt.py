@@ -1,1 +1,2 @@
-exit(0)
+def test_test():
+    assert(True)
