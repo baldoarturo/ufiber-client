@@ -3,8 +3,6 @@ import json
 import requests
 import urllib3
 
-from onu_profile import ONUProfile
-
 # No warnings for self signed certs
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -26,7 +24,6 @@ HEADER_JSON = {
 
 class LoginError(Exception):
     pass
-
 
 class ONUProfile():
 
