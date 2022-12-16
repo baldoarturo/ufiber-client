@@ -1,0 +1,27 @@
+[build-system]
+requires      = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ufiber-client"
+version = "1.0.1"
+description = "Ubiquiti UFiber Client for firmware version 3"
+readme = "README.md"
+authors = [{ name = "Arturo Baldo", email = "baldoarturo@mail.com" }]
+classifiers = [
+    "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+]
+keywords = ["ubiquiti", "ufiber", "gpon", "netowrk", "automation", "networking"]
+dependencies = [
+    "requests",
+]
+requires-python = ">=3.8"pip
+
+
+[project.urls]
+Homepage = "https://github.com/baldoarturo/ufiber-client"
+
+[tool.setuptools]
+packages = ["ufiber"]
